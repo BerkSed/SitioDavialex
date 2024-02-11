@@ -43,7 +43,7 @@
   <body class="bg-mitad hold-transition login-page">
     <div class="login-box">
       <div class="login-logo fw-bolder text-warning">
-        <a class="text-warning" href="index.php">DAVIALEX</a>
+        <a class="text-warning" href="index.html">DAVIALEX</a>
       </div>
       <!-- /.login-logo -->
       <div class="card">

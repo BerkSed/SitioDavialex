@@ -19,10 +19,15 @@ include 'conexion.php';
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
 </head>
-<body class="hold-transition register-page">
+<style>
+      .bg-mitad {
+        background: linear-gradient(to bottom, #212529 50%, #fff 50%);
+      }
+    </style>
+<body class="bg-mitad hold-transition register-page">
 <div class="register-box">
   <div class="register-logo fw-bolder">
-    <a class="text-dark" href="index.php">DAVIALEX</a>
+    <a class="text-warning" href="index.html">DAVIALEX</a>
   </div>
 
   <div class="card">

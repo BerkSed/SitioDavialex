@@ -12,6 +12,10 @@
     />
     <!-- Font Awesome -->
     <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css" />
+    <script
+      src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- icheck bootstrap -->
     <link
       rel="stylesheet"
@@ -32,7 +36,7 @@
   <body class="bg-mitad hold-transition login-page">
     <div class="login-box">
       <div class="login-logo fw-bolder">
-        <a class="text-warning" href="index.php">DAVIALEX</a>
+        <a class="text-warning" href="index.html">DAVIALEX</a>
       </div>
       <!-- /.login-logo -->
       <div class="card text-center">
@@ -82,7 +86,7 @@
           <p class="mb-0">
             <a href="register.php" class="text-center">Resgistrar</a>
           </p>
-          <a class="btn btn-warning" href="index.php"
+          <a class="btn btn-warning" href="index.html"
             ><i class="fa-solid fa-arrow-left"></i> Regresar</a
           >
         </div>
