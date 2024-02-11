@@ -1,32 +1,15 @@
 <?php
-$serverName = "PCE412";
-$connectionOptions = array(
-    "Database" => "Prueba",
-    "IntegratedSecurity" => true
-);
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database = "davialex";
 
-$conn = sqlsrv_connect($serverName, $connectionOptions);
+// Crear conexión
+$conn = new mysqli($servername, $username, $password, $database);
 
-if ($conn === false) {
-    die(print_r(sqlsrv_errors(), true));
-} else {
-    echo "Conexión establecida.<br />";
-}
-
-// A partir de aquí puedes ejecutar consultas SQL y trabajar con la base de datos
-
-// Por ejemplo, ejecutar una consulta simple
-$sql = "SELECT * FROM Usuarios";
-$result = sqlsrv_query($conn, $sql);
-
-if ($result === false) {
-    die(print_r(sqlsrv_errors(), true));
-}
-
-while ($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC)) {
-    echo $row['columna1'] . "<br />";
-}
-
-sqlsrv_free_stmt($result);
-sqlsrv_close($conn);
-?>
+// Revisar la conexión
+// if ($conn->connect_error) {
+//     die("Conexión fallida: " . $conn->connect_error);
+// } 
+// echo "Conexión exitosa";
+// ?>
