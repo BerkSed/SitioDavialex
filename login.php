@@ -80,7 +80,7 @@
             <a href="recuperar.php">¿Se te olvido tu contraseña?</a>
           </p>
           <p class="mb-0">
-            <a href="register.html" class="text-center">Resgistrar</a>
+            <a href="register.php" class="text-center">Resgistrar</a>
           </p>
           <a class="btn btn-warning" href="index.php"
             ><i class="fa-solid fa-arrow-left"></i> Regresar</a

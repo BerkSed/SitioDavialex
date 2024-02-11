@@ -19,10 +19,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Hash de la contraseña
-    $contrasena_hash = password_hash($contrasena, PASSWORD_DEFAULT);
+    // $contrasena_hash = password_hash($contrasena, PASSWORD_DEFAULT);
 
     // Insertar datos en la tabla "login"
-    $sql_login = "INSERT INTO login (email, password, tipo_Usuario) VALUES ('$correo', '$contrasena_hash', 'Usuario')";
+    $sql_login = "INSERT INTO login (email, password, tipo_Usuario) VALUES ('$correo', '$contrasena', 'Usuario')";
 
     if ($conn->query($sql_login) === TRUE) {
         // Insertar datos en la tabla "usuarios"
