@@ -3,30 +3,19 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>AdminLTE 3 | Forgot Password</title>
+    <title>AdminLTE 3 | Log in</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"
     />
-    <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <!-- Font Awesome icons (free version)-->
-    <script
-      src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Google fonts-->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css" />
+    <!-- icheck bootstrap -->
     <link
-      href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
       rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700"
-      rel="stylesheet"
-      type="text/css"
+      href="plugins/icheck-bootstrap/icheck-bootstrap.min.css"
     />
     <!-- Theme style -->
     <link
@@ -42,17 +31,15 @@
   </head>
   <body class="bg-mitad hold-transition login-page">
     <div class="login-box">
-      <div class="login-logo fw-bolder text-warning">
+      <div class="login-logo fw-bolder">
         <a class="text-warning" href="index.php">DAVIALEX</a>
       </div>
       <!-- /.login-logo -->
-      <div class="card">
+      <div class="card text-center">
         <div class="card-body login-card-body">
-          <p class="login-box-msg">
-            Escribe tu correo elctronico para Recuperar contraseña
-          </p>
+          <p class="login-box-msg">Inicia sesión para iniciar</p>
 
-          <form action="recover-password.html" method="post">
+          <form action="" method="post">
             <div class="input-group mb-3">
               <input type="email" class="form-control" placeholder="Email" />
               <div class="input-group-append">
@@ -61,21 +48,43 @@
                 </div>
               </div>
             </div>
+            <div class="input-group mb-3">
+              <input
+                type="password"
+                class="form-control"
+                placeholder="Password"
+              />
+              <div class="input-group-append">
+                <div class="input-group-text">
+                  <span class="fas fa-lock"></span>
+                </div>
+              </div>
+            </div>
             <div class="row">
-              <div class="col-12">
-                <button type="submit" class="btn btn-warning btn-block">
-                  Recuperar contraseña
+              <!-- /.col -->
+              <div class="text-center">
+                <button
+                  type="submit"
+                  class="btn btn-warning btn-block fw-bolder"
+                >
+                  Entrar
                 </button>
               </div>
               <!-- /.col -->
             </div>
           </form>
 
-          <p class="mt-3 mb-1 fw-bolder">
-            <a class="btn btn-warning" href="login.php"
-              ><i class="fa-solid fa-arrow-left"></i> Regresar</a
-            >
+          <!-- /.social-auth-links -->
+
+          <p class="mb-1">
+            <a href="recuperar.php">¿Se te olvido tu contraseña?</a>
           </p>
+          <p class="mb-0">
+            <a href="register.html" class="text-center">Resgistrar</a>
+          </p>
+          <a class="btn btn-warning" href="index.php"
+            ><i class="fa-solid fa-arrow-left"></i> Regresar</a
+          >
         </div>
         <!-- /.login-card-body -->
       </div>
@@ -83,10 +92,10 @@
     <!-- /.login-box -->
 
     <!-- jQuery -->
-    <script src="../../plugins/jquery/jquery.min.js"></script>
+    <script src="plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap 4 -->
-    <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE App -->
-    <script src="../../dist/js/adminlte.min.js"></script>
+    <script src="dist/js/adminlte.min.js"></script>
   </body>
 </html>
