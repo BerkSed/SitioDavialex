@@ -43,9 +43,9 @@
         <div class="card-body login-card-body">
           <p class="login-box-msg">Inicia sesión para iniciar</p>
 
-          <form action="" method="post">
+          <form action="validar.php" method="get">
             <div class="input-group mb-3">
-              <input type="email" class="form-control" placeholder="Email" />
+              <input type="email" class="form-control" placeholder="Email" id="email" name="email"required  />
               <div class="input-group-append">
                 <div class="input-group-text">
                   <span class="fas fa-envelope"></span>
@@ -57,6 +57,9 @@
                 type="password"
                 class="form-control"
                 placeholder="Password"
+                id="pass"
+                name="pass"
+                required
               />
               <div class="input-group-append">
                 <div class="input-group-text">
@@ -93,7 +96,26 @@
         <!-- /.login-card-body -->
       </div>
     </div>
-    <!-- /.login-box -->
+
+    <!-- Modal de error -->
+    <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Error de inicio de sesión</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Email o contraseña incorrectos. Inténtalo de nuevo.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- jQuery -->
     <script src="plugins/jquery/jquery.min.js"></script>
@@ -101,5 +123,32 @@
     <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE App -->
     <script src="dist/js/adminlte.min.js"></script>
+    <script>
+      function reloadPage() {
+        location.reload();
+      }
+
+      $(document).ready(function () {
+        const modal = $('#errorModal');
+
+        if (window.location.hash === '#modal') {
+          modal.modal('show');
+        }
+
+        // Redirigir a login.php cuando se haga clic fuera del modal o en el botón de cierre
+        $(document).on('click', function (e) {
+          if ($(e.target).is(modal) && modal.hasClass('show')) {
+            modal.modal('hide');
+            window.location.href = 'login.php';
+          }
+        });
+
+        const closeButton = modal.find('[data-dismiss="modal"]');
+        closeButton.on('click', function () {
+          modal.modal('hide');
+          window.location.href = 'login.php';
+        });
+      });
+    </script>
   </body>
 </html>
